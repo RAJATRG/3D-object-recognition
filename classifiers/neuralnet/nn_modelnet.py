@@ -8,13 +8,13 @@ import numpy as np
 import os
 from sklearn.preprocessing import StandardScaler
 
-beta=0.01
+# beta=0.01
 
 rate=0.3
 batch_size = 32
 path='ModelNet10pcd'
 classes = os.listdir(path)
-learn_rate=1e-4
+learn_rate=1e-5
 # 20% of the data will automatically be used for validation
 
 data = nn_data.read_train_sets()
