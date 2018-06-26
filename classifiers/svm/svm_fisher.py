@@ -2,26 +2,35 @@ import numpy as np
 import os
 from sklearn.externals import joblib
 from sklearn import svm
+from sklearn.utils import shuffle
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import normalize
+
+# pca=PCA(n_components=908,whiten=False)
 path='ModelNet10pcd'
 classes=os.listdir(path)
 train_label=[]
 train_data=[]
 print classes
+N=100
 for file in classes:
-	train_path=file+'/train'+'/'+file+'_fisher_train.txt'
-	data=np.loadtxt(path+'/'+train_path,delimiter=',')
-
-	train_label=train_label+[file]*100
-	data=data.tolist()
-	for i in xrange(100):
+	train_path='train_fisher/'+file+'_fisher_train.txt'
+	data=np.loadtxt(train_path,delimiter=',')
+	train_label=train_label+[file]*N
+	for i in xrange(N):
 	 	train_data.append(data[i])
 	print file+ '_Done'
 
 
 train_data=np.array(train_data)
-train_label=np.array(train_label)
 print train_data.shape
-print len(train_label)
+train_data=StandardScaler().fit_transform(train_data)
+train_label=np.array(train_label)
+# train_data=pca.fit_transform(train_data)
+# train_data=normalize(train_data, norm='l2')
+print train_data.shape
+
 # print train_label
 # train=np.squeeze(train_data,axis=0).shape
 
