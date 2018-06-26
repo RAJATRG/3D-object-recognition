@@ -79,13 +79,6 @@ def create_fc_layer(input,
 
           
 layer_flat = create_flatten_layer(x)
-# dense1 = tf.layers.dense(inputs=layer_flat, units=2048, activation=tf.nn.relu)
-# dropout = tf.layers.dropout(inputs=dense1, rate=0.4, training=True)
-# # dense2=tf.layers.dense(inputs=dropout, units=2048,activation=tf.nn.relu)
-# # dropout1=tf.layers.dropout(inputs=dense2, rate=0.4, training=True)
-# # dense3=tf.layers.dense(inputs=dropout1,units=2048,activation=tf.nn.relu)
-# # dropout2=tf.layers.dropout(inputs=dense3, rate=0.4, training=True)
-# dense4=tf.layers.dense(inputs=dropout,units=len(classes))
 
 
 num_layer=2048
