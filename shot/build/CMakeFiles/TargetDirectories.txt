@@ -1,0 +1,3 @@
+/home/rajat/Desktop/Summer-Internship/week3/shot/build/CMakeFiles/edit_cache.dir
+/home/rajat/Desktop/Summer-Internship/week3/shot/build/CMakeFiles/rebuild_cache.dir
+/home/rajat/Desktop/Summer-Internship/week3/shot/build/CMakeFiles/shot.dir
